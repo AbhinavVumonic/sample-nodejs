@@ -35,6 +35,6 @@ jobs:
       uses: peter-evans/repository-dispatch@v2
       with:
         token: ${{ secrets.REPO_ACCESS_TOKEN }}
-        repository: AbhinavVumonic/sanplejsmanifest
+        repository: AbhinavVumonic/samplejsmanifest
         event-type: deploy
         client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
