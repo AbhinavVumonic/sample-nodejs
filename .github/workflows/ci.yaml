@@ -7,4 +7,11 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Print OS Info
-        run: uname -a
+        run: |
+          echo "Running uname -a:"
+          uname -a
+      - name: Print Linux Distribution
+        run: |
+          echo "Checking distribution:"
+          if [ -f /etc/os-release ]; then cat /etc/os-release; fi
+          if [ -f /etc/lsb-release ]; then cat /etc/lsb-release; fi
